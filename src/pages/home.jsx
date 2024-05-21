@@ -3,10 +3,11 @@ import gsap from 'gsap';
 
 export default function Home() {
     const galleryRef = useRef();
-    let radius = 200;
-    let isGalleryOpen = false;
+    const isGalleryOpenRef = useRef(false);
 
     useEffect(() => {
+        let radius = 200;
+
         if (galleryRef.current) {
             const gallery = galleryRef.current;
             const centerX = gallery.offsetWidth / 2;
@@ -44,8 +45,8 @@ export default function Home() {
                 }, index * 0.1);
 
                 item.addEventListener("click", function() {
-                    if (!isGalleryOpen) {
-                        isGalleryOpen = true;
+                    if (!isGalleryOpenRef.current) {
+                        isGalleryOpenRef.current = true;
 
                         const duplicate = item.cloneNode(true);
                         duplicate.style.position = "absolute";
@@ -55,7 +56,6 @@ export default function Home() {
             });
         }
     }, []);
-
     return (
         <div id="gallery" className='gallery' ref={galleryRef}>
             <div className="gallery__item"></div>
