@@ -1,0 +1,64 @@
+[
+    {
+      "id":1,
+      "name":"Sweat brodé",
+      "price":42,
+      "img":"1.png", 
+      "sizes" : ["S", "M", "L", "XL"]
+    },
+    {
+      "id":2,
+      "name":"Sweat brodé",
+      "price":42,
+      "img":"2.png",
+      "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":3,
+      "name":"Casquette",
+      "price":42,
+      "img":"3.png",
+      "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":4,
+      "name":"Casquette",
+      "price":42,
+      "img":"4.png",
+      "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":5,
+      "name":"T-shirt",
+      "price":42,
+      "img":"5.png",
+      "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":6,
+      "name":"T-shirt",
+      "price":42,
+      "img":"6.png",
+      "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":7,
+      "name":"Bonnet",
+      "price":42,
+      "img":"7.png",
+            "sizes" : ["S", "M", "L", "XL"]
+
+    },
+    {
+      "id":8,
+      "name":"Bonnet",
+      "price":42,
+      "img":"8.png",
+      "sizes" : ["S", "M", "L", "XL"]
+    }
+  ]
