@@ -9,6 +9,8 @@ export default function Product() {
     const [selectedSize, setSelectedSize] = useState(null);
     const [sizeError, setSizeError] = useState(false);
 
+   
+
     const addToCart = (product) => {
         if (!selectedSize) {
             setSizeError(true);
@@ -35,32 +37,62 @@ export default function Product() {
         localStorage.setItem('cart', JSON.stringify(cart));
         // Affichez la notification
         setNotification(true);
-        // Cachez la notification après 1 secondes
-        setTimeout(() => setNotification(false), 1000);
+        // Cachez la notification après 2 secondes
+        setTimeout(() => setNotification(false), 2000);
     }
     
     productId = Number(productId);
     
     const product = shopItems.find(item => item.id === productId);
-    
+
+    const [mainImage, setMainImage] = useState('/assets/img/shopItems/' + product.img);
+    const [image2, setImage2] = useState('/assets/img/shopItems/' + product.img2);
+    const [image3, setImage3] = useState('/assets/img/shopItems/' + product.img3);
+    const [image4, setImage4] = useState('/assets/img/shopItems/' + product.img4);
+
+    const swapImage = (mainImage, setMainImage, otherImage, setOtherImage) => {
+    const temp = mainImage;
+    setMainImage(otherImage);
+    setOtherImage(temp);
+    };
+
     if (!product) {
         return <div>Product not found</div>;
     }
     return (
-        <div>
-            <img src={'/assets/img/shopItems/' + product.img} alt={product.name}/>
-            <h2>{product.name}</h2>
-            <p>{product.price}€</p>
-            <p>{product.description}</p>
-            <select onChange={(e) => setSelectedSize(e.target.value)}>
-                <option value="">Sélectionnez une taille</option>
-                {product.sizes.map((size, index) => (
-                    <option key={index} value={size}>{size}</option>
-                ))}
-            </select>
-            {sizeError && <p>Veuillez sélectionner une taille</p>}
-            <Button onClick={() => addToCart(product)} text="Ajouter au panier" />
-            {notification && <p>Le produit a été ajouté au panier</p>}
+        <div className='product'>
+            <div className='first-col'>
+            <img id='main' src={mainImage} alt={product.name}/>
+            <div className='wrap'>
+                <img src={image2} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image2, setImage2)}/>
+                <img src={image3} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image3, setImage3)}/>
+                <img src={image4} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image4, setImage4)}/>
+            </div>
+        </div>
+            <div className='second-col'>
+  
+                <div className='header'>
+                    <h2>{product.name}</h2>
+                    <p>{product.price}€</p>
+                </div>
+                <div>
+                    
+                </div>
+                <h3>Description</h3>
+                <p>{product.description}</p>
+                <h3>Tailles</h3>
+                <select onChange={(e) => setSelectedSize(e.target.value)}>
+                    <option value="">-- Sélectionnez --</option>
+                    {product.sizes.map((size, index) => (
+                        <option key={index} value={size}>{size}</option>
+                    ))}
+                </select>
+                {sizeError && <p className='error'>❌ Veuillez sélectionner une taille ❌</p>}
+          
+
+                <Button onClick={() => addToCart(product)} text="Ajouter au panier" />
+                {notification && <div className='notification'><p>✅ Le produit a été ajouté au panier ✅</p></div>}
+            </div>
         </div>
     );
 }

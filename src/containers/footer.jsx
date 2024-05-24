@@ -4,8 +4,8 @@ import Watermark from "../components/footer/watermark";
 const footer = () => {
     return (
         <footer>
-            <Watermark />
-            <SocialMedia />
+                <Watermark />
+                <SocialMedia />
         </footer>
     );
     }

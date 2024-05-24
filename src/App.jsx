@@ -10,6 +10,7 @@ import Checkout from "./pages/checkout";
 
 import Header from "./containers/header";
 import Footer from "./containers/footer";
+import Thanks from "./pages/thanks";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:productId" element={<Product />} />
+        <Route path="/thanks" element={<Thanks />} />
         <Route path="*" element={<NotFound />} /> Route 404
       </Routes>
       <Footer />

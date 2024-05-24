@@ -11,6 +11,10 @@
       "name":"Sweat brodé",
       "price":42,
       "img":"2.png",
+      "img2":"3.png",
+      "img3":"4.png",
+      "img4":"5.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
       "sizes" : ["S", "M", "L", "XL"]
 
     },

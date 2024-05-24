@@ -64,8 +64,8 @@
 header{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 30px;
+  align-items: center;
   background-color: #000;
   max-width: 1400px;
   margin: 0 auto;
@@ -114,13 +114,14 @@ header div button:hover{
 }
 
 footer {
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 30px ;
   background-color: #000;
   max-width: 1400px;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
 
 footer .social-media{
@@ -167,4 +168,354 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.product {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  gap: 20px;
+  position: relative;
+}
+
+.product img, .cart img{
+  border-radius: 20px;
+}
+
+.product #main{
+  width: 400px;
+}
+
+.product select {
+  display: block;
+}
+
+.product .header, .cart .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.first-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap : 20px;
+}
+
+.first-col #main{
+  width: 100%;
+}
+
+.first-col .wrap{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first-col .wrap img{
+  width: 30%;
+}
+
+.product .second-col {
+  width: 100%;
+  position: relative;
+}
+
+.product select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  border: 1px solid red;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.product button {
+  width: 100%;
+  margin-top: 20px;
+  
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  padding: 0.5rem 2rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 830px) {
+  .product {
+    flex-direction: column;
+  }
+  .product img, .cart img{
+    border-radius: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .product{
+    padding: 10px;
+  }
+
+}
+
+.cart{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px; 
+  min-height: 75vh;
+}
+
+.cart .cart-card{
+  display: flex;
+  gap: 20px;
+}
+
+.cart .main {
+  width: 100%;
+}
+.cart .button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart p {
+  font-size: 1.5rem;
+}
+
+.cart h2 {
+
+  margin: 0%;
+}
+
+.cart .main .quantity{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart .main img{
+  width: 300px;
+}
+
+.cart-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.cart-footer button{
+  width: 50%;
+}
+
+@media screen and (max-width: 830px) {
+  .cart .main img{
+    width: 200px;
+  }
+  .cart .cart-card{
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cart .main .quantity{
+    gap: 10px;
+  }
+  .cart p{
+    font-size: 1.2rem;
+  }
+}
+
+.secondary {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+
+.checkout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 75vh;
+}
+
+.checkout form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.checkout form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.checkout form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.checkout .product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.checkout .product {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout .product-card-header, .checkout .product-card-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.popup {
+  position: fixed; /* Positionne la popup par rapport à la fenêtre du navigateur */
+  top: 50%; /* Centre la popup verticalement */
+  left: 50%; /* Centre la popup horizontalement */
+  transform: translate(-50%, -50%); /* Déplace la popup de moitié sa largeur et hauteur pour la centrer parfaitement */
+  width: 80%; /* Fait que la popup prenne 80% de la largeur de l'écran */
+  max-width: 600px; /* Limite la largeur maximale de la popup à 600px */
+  padding: 60px;
+  border-radius: 20px;
+  background-color: black;
+  z-index: 1000; /* Assure que la popup est au-dessus des autres éléments */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre à la popup */
+}
+
+.overlay {
+  position: fixed; /* Positionne l'overlay par rapport à la fenêtre du navigateur */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fait que l'overlay prenne toute la largeur de l'écran */
+  height: 100%; /* Fait que l'overlay prenne toute la hauteur de l'écran */
+  background-color: rgba(0, 0, 0, 0.8); /* Fait que l'overlay soit semi-transparent */
+  z-index: 999; /* Assure que l'overlay est juste en dessous de la popup */
+}
+
+.popup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 20px;
+}
+
+.popup-button button {
+  width: 100%;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+  padding: 30px;
+  margin: 0 auto;
+  min-height: 75vh;
+}
+
+.thanks p{
+  font-size: 1.5rem;
+}
+
+.thanks button{
+  width: 50%;
+}
+
+.about {
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 75vh;
+  display: grid;
+  place-items: center;
+}
+
+.about__text {
+  width: 36ch;
+  animation: typing 2s steps(36), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  text-align: center;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about__text {
+    font-size: 1rem
+  }
+  
 }

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Button from '../components/button';
+import ButtonSecondary from '../components/buttonSecondary';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Cart() {
     const [cart, setCart] = useState([]);
-    const [showPopup, setShowPopup] = useState(false);
     const navigate = useNavigate();
+
     
     useEffect(() => {
         // Récupérez le panier du localStorage
@@ -28,9 +29,7 @@ export default function Cart() {
     // Calculez le total du prix du panier
     const total = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
 
-    if (cart.length === 0) {
-        return <p>Cart is empty</p>;
-    }
+
     const increaseQuantity = (index) => {
         const newCart = [...cart];
         newCart[index].quantity++;
@@ -48,51 +47,43 @@ export default function Cart() {
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart);
     }
+
   
+   
 
-    
-
-    const handlePayment = () => {
-        window.open('https://www.paypal.com/paypalme/thomasshv', '_blank');
-        setShowPopup(true);
+    if (cart.length === 0) {
+        return <div className='cart cart-empty'> <p>Cart is empty</p> </div>;
     }
-
-    const handleConfirmPayment = () => {
-        localStorage.removeItem('cart');
-        setCart([]);
-        setShowPopup(false);
-        navigate('/');
-    }
-
-    const handleCancelPayment = () => {
-        setShowPopup(false);
-    }
-
+    console.log(cart)
     return (
-        <div>
-            <h1>Cart</h1>
+        <div className='cart'>
             {cart.map((product, index) => (
-                <div key={index}>
-                    <h2>{product.name}</h2>
-                    <p>{product.price * product.quantity}€</p>
-                    <p>Quantité: {product.quantity}</p>
-                    <p>Taille sélectionnée: {product.selectedSize}</p>
+                <div key={index} className='cart-card'>
                     <img src={'/assets/img/shopItems/' + product.img} alt={product.name}/>
-                    <Button onClick={() => decreaseQuantity(index)} text="-" />
-                    <Button onClick={() => increaseQuantity(index)} text="+" />
-                    <Button onClick={() => removeFromCart(index)} text="Supprimer" />
+                    <div className='main'>
+                        <div className='header'>
+                            <h2>{product.name}</h2>
+                            <p>{product.price * product.quantity}€</p>
+                        </div>
+                        <div>
+                            <p className='size'>Taille sélectionnée : {product.selectedSize}</p>
+                            <div className='button'>
+                                <div className='quantity'>
+                                    <ButtonSecondary  onClick={() => decreaseQuantity(index)} text="-" />
+                                    <div>{product.quantity}</div>
+                                    <ButtonSecondary className="secondary" onClick={() => increaseQuantity(index)} text="+" />
+                                </div>
+                                <ButtonSecondary className="secondary" onClick={() => removeFromCart(index)} text="Supprimer" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             ))}
-            <h2>Total: {total}€</h2>
-            <Button text="Payer" onClick={handlePayment} />
-
-            {showPopup && (
-                <div className="popup">
-                    <h2>Confirmez-vous le paiement ?</h2>
-                    <Button text="Oui" onClick={handleConfirmPayment} />
-                    <Button text="Non" onClick={handleCancelPayment} />
-                </div>
-            )}
+            <div className='cart-footer'>
+                <h2>Total : {total}€</h2>
+                <Button text="Suivant" onClick={() => navigate('/checkout')} />
+            </div>
         </div>
     );
   

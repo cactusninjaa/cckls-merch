@@ -1,8 +1,8 @@
 export default function About() {
     return (
-        <div>
-            <p>
-                {"La « CCKLS » est une société secrète fondée au début du XIIIe siècle par plusieurs des meilleurs duelistes de PVP swap de l’époque. Elle encourage ses membres à œuvrer pour le progrès de l'humanité et l’enquillage perpétuel, tout en laissant à chacun le soin d'interpréter ses textes. L'organisation doit son nom à la grande Kalys, Déesse du Nether , de la mort, mère destructrice et créatrice . Elle prodigue un enseignement progressif s’établissant sur les symboles de Ra’s al Ghoul sur la sorcellerie, les cigarettes , les maux de tête , la sauce et riz . La société est très active, puisqu’elle compte plus de 10 membres qui essaient de promouvoir via un système de réseau aussi bien les intérêts de la metha Vayne Lulu que ceux de Alpha Oumar Wann le dernier rappeur qui rap. Sa vocation se veut universelle, bien que ses pratiques et ses modes d'organisation soient extrêmement variables selon les pays et les époques, du zozotage espagnol pendant l’inquisition ,aux exploits et prouesses panamiennes en passant par le Caca boudin slovène, elle a pourtant de tout temps tenté d’agrandir son réseau tout en réduisant ses liaisons. La signification des lettres 'C.C.K.L.S' restent encore aujourd'hui inconnues au bataillon, mais certaines théories du complot et one piece du Mont corvo laissent à penser que cela pourrait faire référence au joueur de football cheick keita ( qui est toujours titulaire ) ou encore au système composé de l'ensemble Σ= {Blaise Matuidi + Machine à laver + *****} lors de la transformation adiabatiquement réversible en courant et en tension du frottage sur longue distance du système en question à la suite du but de ce même ensemble ."}
+        <div className="about">
+            <p className="about__text">
+                Some friends & Dumbo based in Paris.
             </p>
         </div>
     );
