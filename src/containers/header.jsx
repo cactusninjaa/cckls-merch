@@ -13,8 +13,8 @@ const Header = () => {
             </div>
             {isOpen && (
                 <div className="links">
+                    <ButtonHeader text="Shop" onClick={() => {document.location.href = "/"}} />
                     <ButtonHeader text="About" onClick={() => {document.location.href = "/about"}} />
-                    <ButtonHeader text="Shop" onClick={() => {document.location.href = "/merch"}} />
                     <ButtonHeader text="Cart" onClick={() => {document.location.href = "/cart"}}/>
                 </div>
             )}

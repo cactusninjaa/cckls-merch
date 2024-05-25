@@ -52,7 +52,12 @@ export default function Cart() {
    
 
     if (cart.length === 0) {
-        return <div className='cart cart-empty'> <p>Cart is empty</p> </div>;
+        return (
+            <div className='cart cart-empty'> 
+                <p>Votre panier est vide</p> 
+                <Button text="Retrourner au shop" onClick={() => navigate('/')} />
+            </div>
+        )
     }
     console.log(cart)
     return (
