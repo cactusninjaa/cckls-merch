@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import shopItems from '../data/shopItems.json'; 
 import Button from '../components/button';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Product() {
     let { productId } = useParams();
@@ -91,7 +93,13 @@ export default function Product() {
           
 
                 <Button onClick={() => addToCart(product)} text="Ajouter au panier" />
-                {notification && <div className='notification'><p>✅ Le produit a été ajouté au panier ✅</p></div>}
+                {notification && 
+                    <Link to="/cart">
+                        <div className='notification'>
+                            <p>✅ Le produit a été ajouté au panier ✅</p>
+                        </div>
+                    </Link>
+                }
             </div>
         </div>
     );

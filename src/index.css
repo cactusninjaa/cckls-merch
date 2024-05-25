@@ -172,6 +172,8 @@ a {
   position: relative;
 }
 
+
+
 .product img, .cart img{
   border-radius: 20px;
 }
@@ -472,6 +474,7 @@ button {
   padding: 30px;
   margin: 0 auto;
   min-height: 75vh;
+  text-align: center;
 }
 
 .thanks p{
@@ -520,4 +523,22 @@ button {
     font-size: 0.8rem
   }
   
+}
+
+@media screen and (max-width: 550px) {
+  .product, .thanks, .checkout, .cart, .about, .card-container {
+    padding: 10px;
+  }
+  
+  button{
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+  }
+
+  .popup {
+    padding: 30px;
+  }
+  .popup h2, .popup h3{
+    font-size: 1.2rem;
+  }
 }

@@ -9,7 +9,7 @@ export default function Thanks() {
 
             <p>Vous recevrez un message pour récupérer votre commande une fois arrivée</p>
 
-            <Button text="Accueil" onClick={navigate('/')} />
+            <Button text="Accueil" onClick={() => navigate('/')} />
         </div>
     );
 }
