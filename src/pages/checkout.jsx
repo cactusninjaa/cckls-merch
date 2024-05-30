@@ -63,7 +63,7 @@ export default function Checkout() {
 
     const handlePayment = () => {
         const summary = `Nom : ${name}\nPrénom : ${firstName}\nTéléphone : ${phone}\n` + 
-            cart.map(item => `Produit: ${item.name}, Prix: ${item.price}, Quantité: ${item.quantity}`).join('\n') + `Total : ${total}€`;
+            cart.map(item => `Produit : ${item.name}, Taille: ${item.selectedSize}, Prix: ${item.price}, Quantité: ${item.quantity}`).join('\n') + `Total : ${total}€`;
     
         navigator.clipboard.writeText(summary);
         window.open('https://www.paypal.com/paypalme/thomasshv', '_blank');
@@ -87,7 +87,9 @@ export default function Checkout() {
                 
                 {cart.map((item, index) => (
                     <div className='product-card' key={index}>
-                        <img src={'/assets/img/shopItems/' + item.img} alt="" />
+                        <div className="bg-img">
+                            <img src={'/assets/img/shopItems/' + item.img} alt="" />
+                        </div>
                         <div className='product-card-header'>
                             <h3>{item.name}</h3>
                             <p>{item.price}€</p>
@@ -121,7 +123,8 @@ export default function Checkout() {
                             <p>
                                 Article {index + 1} : {item.name}, 
                                 prix : {item.price}, 
-                                quantité : {item.quantity}
+                                quantité : {item.quantity},
+                                taille : {item.selectedSize}
                             </p>
                         </div>
                     ))}

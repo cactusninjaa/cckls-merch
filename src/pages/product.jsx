@@ -48,14 +48,11 @@ export default function Product() {
     const product = shopItems.find(item => item.id === productId);
 
     const [mainImage, setMainImage] = useState('/assets/img/shopItems/' + product.img);
-    const [image2, setImage2] = useState('/assets/img/shopItems/' + product.img2);
-    const [image3, setImage3] = useState('/assets/img/shopItems/' + product.img3);
-    const [image4, setImage4] = useState('/assets/img/shopItems/' + product.img4);
+    const [image2] = useState('/assets/img/shopItems/' + product.img2);
+    const [image3] = useState('/assets/img/shopItems/' + product.img3);
 
-    const swapImage = (mainImage, setMainImage, otherImage, setOtherImage) => {
-    const temp = mainImage;
-    setMainImage(otherImage);
-    setOtherImage(temp);
+    const swapImage = (setMainImage, otherImage) => {
+        setMainImage(otherImage);
     };
 
     if (!product) {
@@ -64,11 +61,12 @@ export default function Product() {
     return (
         <div className='product'>
             <div className='first-col'>
-            <img id='main' src={mainImage} alt={product.name}/>
+            <div className='bg-img'>
+                <img id='main' src={mainImage} alt={product.name}/>
+            </div>
             <div className='wrap'>
-                <img src={image2} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image2, setImage2)}/>
-                <img src={image3} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image3, setImage3)}/>
-                <img src={image4} alt={product.name} onClick={() => swapImage(mainImage, setMainImage, image4, setImage4)}/>
+            <img src={image2} alt={product.name} onClick={() => swapImage(setMainImage, image2)}/>
+            <img src={image3} alt={product.name} onClick={() => swapImage(setMainImage, image3)}/>
             </div>
         </div>
             <div className='second-col'>

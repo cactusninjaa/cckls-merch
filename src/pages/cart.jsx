@@ -64,7 +64,9 @@ export default function Cart() {
         <div className='cart'>
             {cart.map((product, index) => (
                 <div key={index} className='cart-card'>
-                    <img src={'/assets/img/shopItems/' + product.img} alt={product.name}/>
+                    <div className='bg-img'>
+                        <img src={'/assets/img/shopItems/' + product.img} alt={product.name}/>
+                    </div>
                     <div className='main'>
                         <div className='header'>
                             <h2>{product.name}</h2>

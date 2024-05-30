@@ -5,8 +5,10 @@ const Card = (props) => {
     return (
         <Link to={`/product/${props.id}`}>
             <div className="card">
-                <img src={'/assets/img/shopItems/' + props.img} alt={props.name} /> 
-                <div>
+                <div className='bg-img'>
+                    <img src={'/assets/img/shopItems/' + props.img} alt={props.name} /> 
+                </div>
+                <div className='text'>
                     <h2>{props.name}</h2>
                     <p>{props.price}€</p>
                 </div>

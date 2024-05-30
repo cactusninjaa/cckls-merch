@@ -1,68 +1,88 @@
 [
     {
       "id":1,
-      "name":"Sweat brodé",
-      "price":42,
+      "name":"Sweat gris",
+      "price": 85,
       "img":"1.png", 
+      "img2":"1.png",
+      "img3":"1-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
       "sizes" : ["S", "M", "L", "XL"]
     },
     {
       "id":2,
-      "name":"Sweat brodé",
-      "price":42,
+      "name":"Sweat noir",
+      "price": 85,
       "img":"2.png",
-      "img2":"3.png",
-      "img3":"4.png",
-      "img4":"5.png",
+      "img2":"2.png",
+      "img3":"2-1.png",
       "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
       "sizes" : ["S", "M", "L", "XL"]
 
     },
     {
       "id":3,
-      "name":"Casquette",
-      "price":42,
+      "name":"Casquette noire",
+      "price": 18,
       "img":"3.png",
-      "sizes" : ["S", "M", "L", "XL"]
+      "img2":"3.png",
+      "img3":"3-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
+      "sizes" : ["Taille unique"]
 
     },
     {
       "id":4,
-      "name":"Casquette",
-      "price":42,
+      "name":"Casquette blanche",
+      "price": 18,
       "img":"4.png",
-      "sizes" : ["S", "M", "L", "XL"]
+      "img2":"4.png",
+      "img3":"3-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
+      "sizes" : ["Taille unique"]
 
     },
     {
       "id":5,
-      "name":"T-shirt",
-      "price":42,
+      "name":"T-shirt blanc",
+      "price": 35,
       "img":"5.png",
+      "img2":"5.png",
+      "img3":"5-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
       "sizes" : ["S", "M", "L", "XL"]
 
     },
     {
       "id":6,
-      "name":"T-shirt",
-      "price":42,
+      "name":"T-shirt noir",
+      "price": 35,
       "img":"6.png",
+      "img2":"6.png",
+      "img3":"6-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
       "sizes" : ["S", "M", "L", "XL"]
 
     },
     {
       "id":7,
-      "name":"Bonnet",
-      "price":42,
+      "name":"T-shirt event",
+      "price": 40,
       "img":"7.png",
-            "sizes" : ["S", "M", "L", "XL"]
+      "img2":"7.png",
+      "img3":"7-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
+      "sizes" : ["S", "M", "L", "XL"]
 
     },
     {
       "id":8,
-      "name":"Bonnet",
+      "name":"Gilet jaune",
       "price":42,
       "img":"8.png",
-      "sizes" : ["S", "M", "L", "XL"]
+      "img2":"8.png",
+      "img3":"8-1.png",
+      "description":"Sweat brodé en coton biologique. Coupe droite, col rond, manches longues, broderie sur le devant. Matière douce et agréable à porter. Composition : 100% coton biologique. Conseil d'entretien : Lavage en machine à 30°.",
+      "sizes" : ["Taille unique"]
     }
   ]
